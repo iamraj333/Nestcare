@@ -31,7 +31,7 @@ ProfessionalRouter.post('/register', async (req, res) => {
             const token = jwt.sign({ role: "professional", email: email.toLowerCase(), phone: phone }, process.env.JWT_SECRET_KEY, { expiresIn: '1d' })
             res.cookie('auth_token', token, {
                 httpOnly: true,
-                sameSite: "lax",
+                sameSite: process.env.SERVER_FOR === "production" ? "none" : "lax",
                 secure: process.env.SERVER_FOR === "production",
                 maxAge: 1 * 24 * 60 * 60 * 1000 //1day
             })

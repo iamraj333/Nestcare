@@ -38,7 +38,7 @@ UserRouter.post("/register", async (req, res) => {
             // Storing token in cookie
             res.cookie("auth_token", token, {
                 httpOnly: true,
-                sameSite: "lax",
+                sameSite: process.env.SERVER_FOR === "production" ? "none" : "lax",
                 secure: process.env.SERVER_FOR === "production",
                 maxAge: 1 * 24 * 60 * 60 * 1000 //1day
             })
