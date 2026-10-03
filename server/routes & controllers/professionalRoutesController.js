@@ -33,6 +33,7 @@ ProfessionalRouter.post('/register', async (req, res) => {
                 httpOnly: true,
                 sameSite: process.env.SERVER_FOR === "production" ? "none" : "lax",
                 secure: process.env.SERVER_FOR === "production",
+                path: "/",
                 maxAge: 1 * 24 * 60 * 60 * 1000 //1day
             })
 

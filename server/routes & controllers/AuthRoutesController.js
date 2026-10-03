@@ -60,6 +60,7 @@ AuthRouter.post('/login', async (req, res) => {
                 httpOnly: true,
                 sameSite: process.env.SERVER_FOR === "production" ? "none" : "lax",
                 secure: process.env.SERVER_FOR === "production",
+                path: "/",
                 maxAge: isRemember ? 7 * 24 * 60 * 60 * 1000 : 24 * 60 * 60 * 1000
             })
 
@@ -95,8 +96,9 @@ AuthRouter.post('/logout', (req, res) => {
     try {
         res.clearCookie("auth_token", {
             httpOnly: true,
+            sameSite: process.env.SERVER_FOR === "production" ? "none" : "lax",
             secure: process.env.SERVER_FOR === "production",
-            sameSite: "lax"
+            path: "/",
         });
 
         return res.status(200).json({
