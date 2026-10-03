@@ -16,12 +16,16 @@ export default function Navbar({ notify }) {
         setDropdownOpen(!dropdownOpen);
     }
 
-    document.addEventListener('click',(e)=>{
+    document.addEventListener('click', (e) => {
         e.stopPropagation();
         setDropdownOpen(false)
     })
 
     async function logoutHandler() {
+        setMenuOpen(false);
+        setDropdownOpen(false);
+        navigate("/login", { replace: true });
+        
         try {
             const message = await logout();
 
