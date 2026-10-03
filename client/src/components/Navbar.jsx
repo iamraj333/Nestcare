@@ -25,21 +25,17 @@ export default function Navbar({ notify }) {
         setMenuOpen(false);
         setDropdownOpen(false);
         navigate("/login", { replace: true });
-        
+
         try {
             const message = await logout();
 
             if (message.success) {
                 toast.success(message.success);
-                navigate("/login");
             } else {
                 toast.error(message.error || "Logout failed");
             }
         } catch (e) {
             toast.error("Something went wrong");
-        } finally {
-            setMenuOpen(false);
-            setDropdownOpen(false);
         }
     }
 
