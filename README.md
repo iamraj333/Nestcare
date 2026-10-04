@@ -8,9 +8,9 @@ The platform provides separate interfaces for customers, service professionals, 
 
 ## Live Demo
 
-**Live Application:** [Add Your Deployed Application URL]
+**Live Application:** https://mynestcare.vercel.app/
 
-**GitHub Repository:** [Add Your GitHub Repository URL]
+**GitHub Repository:** https://github.com/iamraj333/Nestcare
 
 
 ## Table of Contents
