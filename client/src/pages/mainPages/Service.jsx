@@ -42,7 +42,7 @@ const Service = () => {
 
             <section className="py-4 bg-white">
                 <div className="w-full max-w-[1400px] mx-auto px-4 min-[375px]:px-5 sm:px-6 md:px-10 lg:px-16">
-                    <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 md:mb-14">
+                    <div data-aos="fade-up" className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 md:mb-14">
                         <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#bb7702] border-b-2 border-[#0F766E]/20 pb-1">
                             What We Offer
                         </span>
@@ -60,14 +60,14 @@ const Service = () => {
                             <p className="text-[#64748B]">Loading services...</p>
                         </div>
                     ) : services.length === 0 ? (
-                        <div className="py-16 text-center border-2 rounded-xl border-dashed border-zinc-600/50">
+                        <div data-aos="fade-up" className="py-16 text-center border-2 rounded-xl border-dashed border-zinc-600/50">
                             <h2 className="text-xl font-bold text-[#DC2626]">No Services Available</h2>
                             <p className="mt-2 text-sm text-[#64748B]">Please check back later.</p>
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
                             {services.map((service, index) => (
-                                <article  key={service._id}
+                                <article data-aos="fade-up" data-aos-delay={index*100}  key={service._id}
                                     className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
                                     <div className="relative h-52 min-[375px]:h-56 sm:h-60 lg:h-56 overflow-hidden bg-slate-100">
                                         <img src={service.image} alt={service.name} loading="lazy"
@@ -114,7 +114,7 @@ const Service = () => {
                     )}
 
                     {/* ======================== Plans Section ======================== */}
-                    <div className="relative mt-10 sm:mt-12 lg:mt-14 overflow-hidden rounded-2xl bg-[#0F172A] px-5 py-7 sm:px-8 sm:py-8 lg:px-10">
+                    <div data-aos="fade-up" className="relative mt-10 sm:mt-12 lg:mt-14 overflow-hidden rounded-2xl bg-[#0F172A] px-5 py-7 sm:px-8 sm:py-8 lg:px-10">
                         <div className="absolute -right-16 -top-20 w-52 h-52 rounded-full bg-[#0F766E]/20" />
                         <div className="absolute -left-16 -bottom-24 w-56 h-56 rounded-full bg-[#f9d596]/10" />
                         <div className="relative flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6">

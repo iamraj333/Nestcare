@@ -50,7 +50,7 @@ export default function Navbar({ notify }) {
                 )}
 
                 <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-                    <Link to="/" className="shrink-0">
+                    <Link  data-aos="fade-right" to="/" className="shrink-0">
                         <img src={Logo} alt="NestCare Logo" className="w-[105px] sm:w-[110px]" />
                     </Link>
 
@@ -115,17 +115,17 @@ export default function Navbar({ notify }) {
                             </div>
                         ) : !isLoading && (
                             <>
-                                <Link to="/login" className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-[#0F766E]">
+                                <Link data-aos="fade-left" to="/login" className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-[#0F766E]">
                                     <FiLogIn /> Login
                                 </Link>
-                                <Link to="/getStarted" className="group flex items-center gap-1.5 rounded-lg bg-[#0F766E] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#0b5f59] hover:shadow-md lg:px-5">
+                                <Link data-aos="fade-left" to="/getStarted" className="group flex items-center gap-1.5 rounded-lg bg-[#0F766E] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#0b5f59] hover:shadow-md lg:px-5">
                                     Get Started <FiArrowRight className="transition-transform group-hover:translate-x-1" />
                                 </Link>
                             </>
                         )}
                     </div>
 
-                    <button onClick={() => setMenuOpen(!menuOpen)} className="flex h-9 w-9 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 sm:hidden">
+                    <button  data-aos="fade-left" onClick={() => setMenuOpen(!menuOpen)} className="flex h-9 w-9 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 sm:hidden">
                         {menuOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
                     </button>
                 </nav>

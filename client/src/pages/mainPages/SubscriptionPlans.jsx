@@ -46,7 +46,7 @@ export default function SubscriptionPlans() {
             <Navbar />
             <section className="py-12 min-[375px]:py-14 sm:py-16 md:py-20 lg:py-24 bg-slate-50">
                 <div className="w-full max-w-[1400px] mx-auto px-4 min-[375px]:px-5 sm:px-6 md:px-10 lg:px-16 xl:px-20">
-                    <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 md:mb-14">
+                    <div data-aos="fade-up" className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 md:mb-14">
                         <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#bb7702] border-b-2 border-[#0F766E]/20 pb-1">
                             <IoSparkles />
                             Membership Plans
@@ -70,14 +70,14 @@ export default function SubscriptionPlans() {
                                 <div className="w-10 h-10 border-4 border-[#0F766E]/20 border-t-[#0F766E] rounded-full animate-spin"></div>
                             </div>
                         ) : subscriptionPlans.length === 0 ? (
-                            <div className="col-span-full text-center py-20 border-2 rounded-xl border-dashed border-zinc-600/50">
+                            <div data-aos="fade-up" className="col-span-full text-center py-20 border-2 rounded-xl border-dashed border-zinc-600/50">
                                 <p className="text-sm sm:text-base text-[#DC2626]">
                                     No subscription plans available.
                                 </p>
                             </div>
                         ) : (
                             subscriptionPlans.map((plan, index) => (
-                                <div key={index}
+                                <div data-aos="fade-up" data-aos-delay={index*100} key={index}
                                     className={`relative flex flex-col bg-white rounded-2xl border p-5 sm:p-6 lg:p-7 transition-all duration-300 ${index == 1
                                         ? "border-[#0F766E] shadow-xl lg:-translate-y-3"
                                         : "border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1"
@@ -155,25 +155,25 @@ export default function SubscriptionPlans() {
                     </div>
 
                     <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-center">
-                        <div className="flex items-center gap-2">
+                        <div data-aos="fade-up" data-aos-delay="100" className="flex items-center gap-2">
                             <IoCheckmarkCircle className="text-[#0F766E] text-lg" />
                             <span className="text-xs sm:text-sm text-[#64748B]">
                                 Reliable Professionals
                             </span>
                         </div>
 
-                        <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-300" />
+                        <div data-aos="fade-up" data-aos-delay="200" className="hidden sm:block w-1 h-1 rounded-full bg-slate-300" />
 
-                        <div className="flex items-center gap-2">
+                        <div data-aos="fade-up" data-aos-delay="300" className="flex items-center gap-2">
                             <IoCheckmarkCircle className="text-[#0F766E] text-lg" />
                             <span className="text-xs sm:text-sm text-[#64748B]">
                                 Priority Support
                             </span>
                         </div>
 
-                        <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-300" />
+                        <div data-aos="fade-up" data-aos-delay="400" className="hidden sm:block w-1 h-1 rounded-full bg-slate-300" />
 
-                        <div className="flex items-center gap-2">
+                        <div data-aos="fade-up" data-aos-delay="500" className="flex items-center gap-2">
                             <IoCheckmarkCircle className="text-[#0F766E] text-lg" />
                             <span className="text-xs sm:text-sm text-[#64748B]">
                                 Hassle-Free Service

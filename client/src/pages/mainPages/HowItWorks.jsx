@@ -63,7 +63,7 @@ export default function HowItWorks() {
                     <div className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-[#47e8db]/20 blur-3xl" />
                     <div className="absolute -bottom-40 -left-20 h-96 w-96 rounded-full bg-[#F59E0B]/10 blur-3xl" />
                     <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-10 lg:py-24">
-                        <div className="mx-auto max-w-3xl text-center">
+                        <div data-aos="fade-up" className="mx-auto max-w-3xl text-center">
                             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white">
                                 <IoSparklesOutline className="text-[#FBBF24]" />
                                 Simple. Planned. Reliable.
@@ -75,7 +75,7 @@ export default function HowItWorks() {
                             <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg">
                                 NestCare helps you move from unexpected home repairs to planned and reliable home maintenance.
                             </p>
-                            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+                            <div data-aos="zoom-in" className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
                                 <Link to="/plans" className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3.5 font-semibold text-[#0F766E] shadow-md transition hover:bg-slate-50">
                                     Explore Plans
                                     <IoArrowForward />
@@ -89,14 +89,14 @@ export default function HowItWorks() {
                 </section>
 
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-20">
-                    <div className="max-w-2xl mx-auto text-center">
+                    <div data-aos="fade-up" className="max-w-2xl mx-auto text-center">
                         <p className="text-[#bb7702] text-sm font-semibold uppercase tracking-wider">How It Works</p>
                         <h2 className="text-3xl sm:text-4xl font-bold mt-2">Four simple steps to better home care</h2>
                         <p className="text-[#64748B] mt-4 leading-relaxed">From creating your account to getting your service completed, NestCare keeps the entire process simple.</p>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 mt-12">
-                        {steps.map((step) => (
-                            <div key={step.number} className="relative bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-[#47e8db] transition duration-300">
+                        {steps.map((step,index) => (
+                            <div data-aos="fade-up" data-aos-delay={index*100} key={step.number} className="relative bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-[#47e8db] transition duration-300">
                                 <div className="flex items-center justify-between">
                                     <div className="w-12 h-12 rounded-xl bg-[#dffaf7] text-[#0F766E] flex items-center justify-center text-2xl">
                                         {step.icon}
@@ -112,15 +112,15 @@ export default function HowItWorks() {
                 <section className="bg-white border-y border-slate-200">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-20">
                         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                            <div>
+                            <div data-aos="fade-right">
                                 <p className="text-[#bb7702] text-sm font-semibold uppercase tracking-wider">Why NestCare</p>
                                 <h2 className="text-3xl sm:text-4xl font-bold mt-2 leading-tight">More than a repair service</h2>
                                 <p className="text-[#64748B] leading-relaxed mt-5 max-w-xl">
                                     NestCare is designed around planned home maintenance, helping customers keep important household services organized and accessible through a subscription-based approach.
                                 </p>
                                 <div className="grid sm:grid-cols-2 gap-4 mt-8">
-                                    {benefits.map((benefit) => (
-                                        <div key={benefit.title} className="flex gap-4 p-4 rounded-xl bg-[#F9FAFB] border border-slate-100">
+                                    {benefits.map((benefit,index) => (
+                                        <div data-aos="zoom-in" data-aos-delay={index*100} key={benefit.title} className="flex gap-4 p-4 rounded-xl bg-[#F9FAFB] border border-slate-100">
                                             <div className="shrink-0 w-10 h-10 rounded-lg bg-[#dffaf7] text-[#0F766E] flex items-center justify-center text-xl">
                                                 {benefit.icon}
                                             </div>
@@ -132,10 +132,10 @@ export default function HowItWorks() {
                                     ))}
                                 </div>
                             </div>
-                            <div className="relative">
+                            <div data-aos="fade-left" className="relative">
                                 <div className="bg-[#0F766E] rounded-3xl p-7 sm:p-9 lg:p-10 overflow-hidden">
                                     <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-white/10"></div>
-                                    <div className="absolute -bottom-20 -left-16 w-48 h-48 rounded-full bg-[#F59E0B]/20"></div>
+                                    <div data-aos="zoom-in" data-aos-delay="300" className="absolute -bottom-20 -left-16 w-48 h-48 rounded-full bg-[#F59E0B]/20"></div>
                                     <div className="relative">
                                         <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-white text-3xl">
                                             <IoHomeOutline />
@@ -155,7 +155,7 @@ export default function HowItWorks() {
                     </div>
                 </section>
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-20">
-                    <div className="max-w-3xl mx-auto text-center">
+                    <div data-aos="fade-up" className="max-w-3xl mx-auto text-center">
                         <div className="w-14 h-14 rounded-2xl bg-[#dffaf7] text-[#0F766E] flex items-center justify-center text-3xl mx-auto">
                             <IoCheckmarkCircleOutline />
                         </div>

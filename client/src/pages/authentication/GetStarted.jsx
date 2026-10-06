@@ -10,7 +10,7 @@ const GetStarted = () => {
             <Navbar />
             <main className="bg-slate-50 py-14">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center">
+                    <div data-aos="fade-up" className="text-center">
                         <p className="text-[#bb7702] text-sm font-semibold uppercase tracking-[0.2em] mb-4">
                             Get Started With NestCare
                         </p>
@@ -19,7 +19,7 @@ const GetStarted = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mt-12">
-                        <div className="bg-white border border-slate-200 rounded-2xl p-8 text-center">
+                        <div data-aos="fade-up" data-aos-delay="100" className="bg-white border border-slate-200 rounded-2xl p-8 text-center">
                             <div className="w-16 h-16 rounded-2xl bg-[#bb7702]/10 flex items-center justify-center mx-auto">
                                 <IoPersonOutline className="text-[#bb7702] text-3xl" />
                             </div>
@@ -30,7 +30,7 @@ const GetStarted = () => {
                             </Link>
                         </div>
 
-                        <div className="bg-white border border-slate-200 rounded-2xl p-8 text-center">
+                        <div data-aos="fade-up" data-aos-delay="200" className="bg-white border border-slate-200 rounded-2xl p-8 text-center">
                             <div className="w-16 h-16 rounded-2xl bg-[#bb7702]/10 flex items-center justify-center mx-auto">
                                 <IoConstructOutline className="text-[#bb7702] text-3xl" />
                             </div>

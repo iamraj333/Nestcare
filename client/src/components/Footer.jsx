@@ -54,7 +54,7 @@ export default function Footer() {
         <footer className="bg-slate-50 text-[#64748B] pt-12 sm:pt-14 lg:pt-16 pb-6 sm:pb-8 border-t border-slate-200/60">
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8 xl:gap-14 pb-10 sm:pb-12 border-b border-slate-200">
-                    <div className="min-w-0">
+                    <div  data-aos="fade-up" data-aos-delay="100" className="min-w-0">
                         <div className="flex items-center">
                             <img
                                 src={Logo}
@@ -83,7 +83,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div>
+                    <div  data-aos="fade-up" data-aos-delay="200">
                         <h4 className="text-sm font-bold uppercase tracking-wider text-[#0F172A] mb-4 sm:mb-5">
                             Our Company
                         </h4>
@@ -96,7 +96,7 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div>
+                    <div  data-aos="fade-up" data-aos-delay="300">
                         <h4 className="text-sm font-bold uppercase tracking-wider text-[#0F172A] mb-4 sm:mb-5">
                             Contact Info
                         </h4>
@@ -122,7 +122,7 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div className="min-w-0">
+                    <div  data-aos="fade-up" data-aos-delay="400" className="min-w-0">
                         <h4 className="text-sm font-bold uppercase tracking-wider text-[#0F172A] mb-4 sm:mb-5">
                             Fresh Care Tips
                         </h4>

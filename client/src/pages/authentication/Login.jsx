@@ -99,7 +99,7 @@ export default function Login() {
             <Navbar />
             <div className="min-h-screen bg-slate-50 flex items-center justify-center px-4 min-[375px]:px-5 sm:px-6 py-12">
 
-                <div className="w-full max-w-md">
+                <div data-aos="fade-up" className="w-full max-w-md">
                     <div className="text-center mb-8">
                         <p className="text-[#bb7702] text-sm font-semibold uppercase tracking-[0.2em] mb-3">Welcome Back</p>
                         <h1 className="text-3xl md:text-4xl font-bold text-[#0F172A]">Login to NestCare</h1>

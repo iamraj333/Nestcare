@@ -14,8 +14,9 @@ import { FaHouseUser } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 
 
+
 export default function Home() {
-    const navigate=useNavigate()
+    const navigate = useNavigate()
     const services = [
         {
             icon: <MdOutlineHomeWork className="text-2xl" />,
@@ -63,6 +64,7 @@ export default function Home() {
         }
     ];
 
+
     return (
         <div className="w-full min-h-screen bg-slate-50 font-sans">
             <Navbar />
@@ -73,7 +75,7 @@ export default function Home() {
             >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent z-10" />
 
-                <div className="container mx-auto px-6 md:px-12 lg:px-16 z-20 py-16 md:py-0 w-full">
+                <div data-aos="fade-right" className="container mx-auto px-6 md:px-12 lg:px-16 z-20 py-16 md:py-0 w-full">
                     <div className="max-w-2xl flex flex-col items-start">
 
                         <span className="inline-block px-3 py-1.5 rounded-full bg-[#f9d596]/30 text-[#935e03] text-xs font-bold tracking-wide uppercase">
@@ -121,7 +123,7 @@ export default function Home() {
             <section className="py-20 bg-slate-50">
                 <div className="container mx-auto px-6 md:px-12 lg:px-16">
 
-                    <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
+                    <div data-aos="fade-up" className="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
                         <span className="text-xs font-bold uppercase tracking-widest text-[#bb7702] border-b-2 border-[#0F766E]/20 pb-1 mb-4">
                             What We Offer
                         </span>
@@ -137,6 +139,8 @@ export default function Home() {
                         {services.map((service, index) => (
                             <div
                                 key={index}
+                                data-aos="fade-up"
+                                data-aos-delay={index*100}
                                 className="group relative flex flex-col items-start bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
                             >
                                 <div className="p-3.5 rounded-xl bg-[#0F766E]/10 text-[#0F766E] transition-colors group-hover:bg-[#0F766E] group-hover:text-white duration-300 mb-6 shrink-0">
@@ -158,8 +162,8 @@ export default function Home() {
                         ))}
                     </div>
 
-                    <div className="flex justify-center mt-12">
-                        <button onClick={()=>navigate("/services")} className="group rounded-xl bg-[#0F766E] hover:bg-[#0D645D] transition-colors font-semibold text-sm p-4 px-8 text-white shadow-md shadow-[#0F766E]/15 flex items-center gap-2">
+                    <div data-aos="fade-up"  className="flex justify-center mt-12">
+                        <button onClick={() => navigate("/services")} className="group rounded-xl bg-[#0F766E] hover:bg-[#0D645D] transition-colors font-semibold text-sm p-4 px-8 text-white shadow-md shadow-[#0F766E]/15 flex items-center gap-2">
                             View All Services
                             <span className="inline-block transform group-hover:translate-x-1 transition-transform">→</span>
                         </button>
@@ -175,7 +179,7 @@ export default function Home() {
                 <div className="container mx-auto px-6 md:px-12 lg:px-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-                        <div className="relative group order-2 lg:order-1">
+                        <div  data-aos="fade-right" className="relative group order-2 lg:order-1">
                             <div className="absolute -inset-4 rounded-2xl bg-gradient-to-tr from-[#0F766E]/10 to-transparent -rotate-1 scale-95 transition-transform group-hover:scale-100 duration-500" />
 
                             <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3] sm:aspect-[16/10] lg:aspect-square bg-slate-100 border border-slate-200">
@@ -186,7 +190,7 @@ export default function Home() {
                                 />
                             </div>
 
-                            <div className="absolute -bottom-6 -right-2 sm:right-6 bg-white p-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-3 animate-fade-in">
+                            <div data-aos="zoom-in" className="absolute -bottom-6 -right-2 sm:right-6 bg-white p-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-3 animate-fade-in">
                                 <div className="w-12 h-12 rounded-lg bg-[#f9d596]/20 flex items-center justify-center text-[#935e03] font-bold text-xl">
                                     5★
                                 </div>
@@ -197,7 +201,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col items-start order-1 lg:order-2">
+                        <div  data-aos="fade-left" className="flex flex-col items-start order-1 lg:order-2">
                             <span className="text-xs font-bold uppercase tracking-widest text-[#bb7702] border-b-2 border-[#0F766E]/20 pb-1 mb-4">
                                 Who We Are
                             </span>
@@ -258,7 +262,7 @@ export default function Home() {
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-6 md:px-12 lg:px-16">
 
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+                    <div  data-aos="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
                         <div className="max-w-xl">
                             <span className="text-xs font-bold uppercase tracking-widest text-[#bb7702] border-b-2 border-[#0F766E]/20 pb-1 mb-4 inline-block">
                                 Testimonials
@@ -271,7 +275,7 @@ export default function Home() {
                             </p>
                         </div>
 
-                        <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200/60 shrink-0 self-start md:self-auto">
+                        <div  data-aos="zoom-in" data-aos-delay="200" className="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200/60 shrink-0 self-start md:self-auto">
                             <div className="text-3xl font-black text-[#0F172A]">4.9</div>
                             <div>
                                 <div className="flex text-amber-500 text-lg">
@@ -287,6 +291,8 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                         {reviews.map((review, index) => (
                             <div
+                                data-aos="fade-up"
+                                data-aos-delay={index*100}
                                 key={index}
                                 className="flex flex-col bg-slate-50 border border-slate-200/50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 justify-between"
                             >
@@ -304,7 +310,7 @@ export default function Home() {
 
                                 <div className="mt-8 pt-6 border-t border-slate-200/60 flex items-center gap-4">
                                     <div className="w-12 h-12 flex justify-center items-center rounded-full overflow-hidden bg-slate-200 shadow-sm shrink-0">
-                                        <FaHouseUser className="text-2xl"/>
+                                        <FaHouseUser className="text-2xl" />
                                     </div>
                                     <div className="flex-grow">
                                         <div className="flex items-center gap-1.5">
@@ -327,7 +333,7 @@ export default function Home() {
 
 
             {/* ===================== Footer Section============================================================ */}
-            <Footer/>
+            <Footer />
         </div>
     );
 }

@@ -36,8 +36,22 @@ import AdminSettings from "./pages/admin/AdminSettings"
 import ManageSubscription from "./pages/customer/ManageSubscription"
 import Contact from "./pages/mainPages/Contact"
 import AdminContacts from "./pages/admin/AdminContact"
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react"
 
 function App() {
+  // =========================== AOS ANIMATION ===========================================
+  useEffect(() => {
+    if (AOS) {
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+        easing: "ease-out-cubic",
+      })
+    }
+  }, [])
 
   return (
     <>
@@ -50,17 +64,17 @@ function App() {
           <Route path="/howitworks" element={<HowItWorks />}></Route>
           <Route path="/getStarted" element={<GetStarted />}></Route>
           <Route path="/login" element={<Login />}></Route>
-          <Route path="/contact" element={<Contact/>}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
 
           {/*========= USER ROUTES ===================== */}
           <Route path="/user/register" element={<Register />}></Route>
           <Route path="/user/dashboard" element={<UserProtectRoute><Dashboard /></UserProtectRoute>}></Route>
           <Route path="/user/profile" element={<Profile />}></Route>
-          <Route path="/plans/purchase/:id" element={<PurchaseSubscription/>}></Route>
-          <Route path="/booking/:id" element={<UserProtectRoute><Booking/></UserProtectRoute>}></Route>
-          <Route path="/customer/bookings" element={<UserProtectRoute><CustomerBookings/></UserProtectRoute>}></Route>
-          <Route path="/customer/disputes" element={<UserProtectRoute><CustomerDisputes/></UserProtectRoute>}></Route>
-          <Route path="/customer/manageSubscription" element={<UserProtectRoute><ManageSubscription/></UserProtectRoute>}></Route>
+          <Route path="/plans/purchase/:id" element={<PurchaseSubscription />}></Route>
+          <Route path="/booking/:id" element={<UserProtectRoute><Booking /></UserProtectRoute>}></Route>
+          <Route path="/customer/bookings" element={<UserProtectRoute><CustomerBookings /></UserProtectRoute>}></Route>
+          <Route path="/customer/disputes" element={<UserProtectRoute><CustomerDisputes /></UserProtectRoute>}></Route>
+          <Route path="/customer/manageSubscription" element={<UserProtectRoute><ManageSubscription /></UserProtectRoute>}></Route>
 
           {/*===================== PROFESSIONALS ROUTES =============================*/}
           <Route path="/professional/register" element={<ProfessionalRegister />}></Route>
@@ -71,16 +85,16 @@ function App() {
           <Route path="/admin/dashboard" element={<AdminProtectedRoute><AdminDashboard /></AdminProtectedRoute>}></Route>
           <Route path="/admin/subscriptionPlan/create" element={<AdminProtectedRoute><CreateSubscriptionPlan /></AdminProtectedRoute>}></Route>
           <Route path="/admin/page/subscriptionPlan" element={<AdminProtectedRoute><AdminSubscriptionPlans /></AdminProtectedRoute>}></Route>
-          <Route path="/admin/service/create" element={<AdminProtectedRoute><CreateService/></AdminProtectedRoute>}></Route>
-          <Route path="/admin/page/services" element={<AdminProtectedRoute><AdminServices/></AdminProtectedRoute>}></Route>
-          <Route path="/admin/service/edit/:serviceId" element={<AdminProtectedRoute><EditService/></AdminProtectedRoute>}></Route>
-          <Route path="/admin/professionals" element={<AdminProtectedRoute><AdminProfessionals/></AdminProtectedRoute>}></Route>
-          <Route path="/admin/customers" element={<AdminProtectedRoute><AdminCustomers/></AdminProtectedRoute>}></Route>
-          <Route path="/admin/bookings" element={<AdminProtectedRoute><AdminBookings/></AdminProtectedRoute>}></Route>
-          <Route path="/admin/disputes" element={<AdminProtectedRoute><AdminDisputes/></AdminProtectedRoute>}></Route>
-          <Route path="/admin/community" element={<AdminProtectedRoute><AdminCommunity/></AdminProtectedRoute>}></Route>
-          <Route path="/admin/settings" element={<AdminProtectedRoute><AdminSettings/></AdminProtectedRoute>}></Route>
-          <Route path="/admin/contacts" element={<AdminProtectedRoute><AdminContacts/></AdminProtectedRoute>}></Route>
+          <Route path="/admin/service/create" element={<AdminProtectedRoute><CreateService /></AdminProtectedRoute>}></Route>
+          <Route path="/admin/page/services" element={<AdminProtectedRoute><AdminServices /></AdminProtectedRoute>}></Route>
+          <Route path="/admin/service/edit/:serviceId" element={<AdminProtectedRoute><EditService /></AdminProtectedRoute>}></Route>
+          <Route path="/admin/professionals" element={<AdminProtectedRoute><AdminProfessionals /></AdminProtectedRoute>}></Route>
+          <Route path="/admin/customers" element={<AdminProtectedRoute><AdminCustomers /></AdminProtectedRoute>}></Route>
+          <Route path="/admin/bookings" element={<AdminProtectedRoute><AdminBookings /></AdminProtectedRoute>}></Route>
+          <Route path="/admin/disputes" element={<AdminProtectedRoute><AdminDisputes /></AdminProtectedRoute>}></Route>
+          <Route path="/admin/community" element={<AdminProtectedRoute><AdminCommunity /></AdminProtectedRoute>}></Route>
+          <Route path="/admin/settings" element={<AdminProtectedRoute><AdminSettings /></AdminProtectedRoute>}></Route>
+          <Route path="/admin/contacts" element={<AdminProtectedRoute><AdminContacts /></AdminProtectedRoute>}></Route>
           <Route path="*" element={<PageNotFound />}></Route>
 
         </Routes>

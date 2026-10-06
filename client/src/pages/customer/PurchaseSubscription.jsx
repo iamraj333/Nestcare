@@ -186,7 +186,7 @@ export default function PurchaseSubscription() {
                     </button>
 
                     <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-                        <div className="lg:col-span-3 bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
+                        <div data-aos="fade-right" className="lg:col-span-3 bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
                             <div className="flex items-center justify-between gap-4">
                                 <div>
                                     <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#bb7702]">{plan.name}</span>
@@ -212,7 +212,7 @@ export default function PurchaseSubscription() {
                             </div>
                         </div>
 
-                        <div className="lg:col-span-2 bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
+                        <div data-aos="fade-left" className="lg:col-span-2 bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
                             <h2 className="text-xl font-extrabold text-[#0F172A]">Complete Your Purchase</h2>
                             <div className="mt-6 flex items-end gap-1 border-b border-slate-100 pb-6">
                                 <span className="text-sm font-bold text-[#64748B]">₹</span>

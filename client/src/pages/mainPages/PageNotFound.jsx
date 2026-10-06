@@ -10,7 +10,7 @@ const PageNotFound = () => {
         <Navbar/>
             <section className=" min-h-[calc(100vh-80px)] w-full bg-white flex items-center py-12 min-[375px]:py-14 sm:py-16 md:py-20 lg:py-24">
                 <div className=" w-full max-w-[1600px] mx-auto px-4 min-[375px]:px-5 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-24">
-                    <div className="w-full max-w-4xl mx-auto text-center">
+                    <div data-aos="fade-up" className="w-full max-w-4xl mx-auto text-center">
 
                         <div className="relative inline-block">
                             <div className=" absolute " />

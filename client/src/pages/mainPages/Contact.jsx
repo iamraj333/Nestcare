@@ -80,7 +80,7 @@ export default function Contact() {
             <Navbar />
             <main className="min-h-screen bg-[#F9FAFB]">
                 <section className="bg-[#0F766E]">
-                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-14 sm:py-20">
+                    <div data-aos="fade-right" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-14 sm:py-20">
                         <button type="button" onClick={() => navigate(-1)} className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white">
                             <IoArrowBack />
                             Back
@@ -98,7 +98,7 @@ export default function Contact() {
                 <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-14">
                     <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
                         <div className="space-y-4">
-                            <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                            <div data-aos="fade-right" data-aos-delay="100" className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
                                 <div className="w-11 h-11 rounded-xl bg-[#dffaf7] text-[#0F766E] flex items-center justify-center text-xl">
                                     <IoCallOutline />
                                 </div>
@@ -109,7 +109,7 @@ export default function Contact() {
                                 </a>
                             </div>
 
-                            <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                            <div data-aos="fade-right" data-aos-delay="200" className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
                                 <div className="w-11 h-11 rounded-xl bg-amber-50 text-[#bb7702] flex items-center justify-center text-xl">
                                     <IoMailOutline />
                                 </div>
@@ -120,7 +120,7 @@ export default function Contact() {
                                 </a>
                             </div>
 
-                            <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                            <div data-aos="fade-right" data-aos-delay="300" className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
                                 <div className="w-11 h-11 rounded-xl bg-[#dffaf7] text-[#0F766E] flex items-center justify-center text-xl">
                                     <IoLocationOutline />
                                 </div>
@@ -132,7 +132,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <div className="lg:col-span-2 bg-white border border-slate-200 rounded-2xl shadow-sm p-6 sm:p-8">
+                        <div data-aos="fade-left" className="lg:col-span-2 bg-white border border-slate-200 rounded-2xl shadow-sm p-6 sm:p-8">
                             <h2 className="text-2xl font-bold text-[#0F172A]">Send us a message</h2>
                             <p className="text-sm text-[#64748B] mt-2">Fill in the details below and we'll get back to you.</p>
 

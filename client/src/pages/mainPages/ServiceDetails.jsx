@@ -76,7 +76,7 @@ export default function ServiceDetails() {
         <>
             <Navbar />
             <main className="bg-[#F9FAFB] py-8 sm:py-10 lg:py-14">
-                <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-10">
+                <div data-aos="fade-up" className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-10">
                     <Link to="/services" className="inline-flex items-center gap-2 text-sm font-semibold text-[#64748B] hover:text-[#0F766E] transition-colors">
                         <IoArrowBack />
                         Back to Services
